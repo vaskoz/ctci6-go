@@ -4,12 +4,10 @@ func IsUnique(str string) bool {
 	m := map[rune]int{}
 	runes := []rune(str)
 	for _, r := range runes {
-		m[r]++
-	}
-	for _, v := range m {
-		if v > 1 {
+		if count := m[r]; count == 1 {
 			return false
 		}
+		m[r]++
 	}
 	return true
 }
