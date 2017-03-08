@@ -13,3 +13,15 @@ func IsUnique(str string) bool {
 	}
 	return true
 }
+
+func IsUniqueNoDS(str string) bool {
+	runes := []rune(str)
+	for i := range runes {
+		for j := i + 1; j < len(runes); j++ {
+			if runes[i] == runes[j] {
+				return false
+			}
+		}
+	}
+	return true
+}
