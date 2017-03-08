@@ -1,4 +1,4 @@
 language: go
-
 go:
   - master
+script: go test -bench=. -v -race ./...
