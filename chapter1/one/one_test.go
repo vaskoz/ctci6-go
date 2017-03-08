@@ -72,19 +72,25 @@ func BenchmarkIsUniqueNoDS(b *testing.B) {
 }
 
 func BenchmarkIsUnique1kString(b *testing.B) {
+	s := generateUniqueString(1000)
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		IsUnique(generateUniqueString(1000))
+		IsUnique(s)
 	}
 }
 
 func BenchmarkIsUniqueSort1kString(b *testing.B) {
+	s := generateUniqueString(1000)
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		IsUniqueSort(generateUniqueString(1000))
+		IsUniqueSort(s)
 	}
 }
 
 func BenchmarkIsUniqueNoDS1kString(b *testing.B) {
+	s := generateUniqueString(1000)
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		IsUniqueNoDS(generateUniqueString(1000))
+		IsUniqueNoDS(s)
 	}
 }
