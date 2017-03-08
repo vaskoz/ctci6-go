@@ -31,6 +31,14 @@ func TestIsUnique(t *testing.T) {
 	}
 }
 
+func TestIsUniqueSort(t *testing.T) {
+	for _, c := range testcases {
+		if IsUniqueSort(c.in) != c.out {
+			t.Errorf("IsUniqueSort given %s should output %t\n", c.in, c.out)
+		}
+	}
+}
+
 func TestIsUniqueNoDS(t *testing.T) {
 	for _, c := range testcases {
 		if IsUniqueNoDS(c.in) != c.out {
@@ -47,6 +55,14 @@ func BenchmarkIsUnique(b *testing.B) {
 	}
 }
 
+func BenchmarkIsUniqueSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		for _, c := range testcases {
+			IsUniqueSort(c.in)
+		}
+	}
+}
+
 func BenchmarkIsUniqueNoDS(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		for _, c := range testcases {
@@ -58,6 +74,12 @@ func BenchmarkIsUniqueNoDS(b *testing.B) {
 func BenchmarkIsUnique1kString(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		IsUnique(generateUniqueString(1000))
+	}
+}
+
+func BenchmarkIsUniqueSort1kString(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		IsUniqueSort(generateUniqueString(1000))
 	}
 }
 
