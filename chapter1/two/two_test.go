@@ -20,3 +20,11 @@ func TestIsPermutation(t *testing.T) {
 		}
 	}
 }
+
+func TestIsPermutationDS(t *testing.T) {
+	for _, c := range testcases {
+		if IsPermutationDS(c.in[0], c.in[1]) != c.out {
+			t.Errorf("IsPermutationDS given %s and %s but got %t\n", c.in[0], c.in[1], c.out)
+		}
+	}
+}
