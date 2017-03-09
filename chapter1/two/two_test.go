@@ -11,6 +11,7 @@ var testcases = []struct {
 	{[]string{"of", "of"}, true},
 	{[]string{"off", "fof"}, true},
 	{[]string{"off", "oof"}, false},
+	{[]string{"off", "oofo"}, false},
 }
 
 func generateUniqueString(length int) string {
