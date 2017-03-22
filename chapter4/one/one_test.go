@@ -49,3 +49,11 @@ func TestRouteExists(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkRouteExists(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		for _, c := range testcases {
+			RouteExists(c.data, c.start, c.end)
+		}
+	}
+}
