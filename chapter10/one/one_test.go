@@ -21,3 +21,11 @@ func TestMerge(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkMerge(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		for _, c := range testcases {
+			Merge(c.a, c.b)
+		}
+	}
+}
