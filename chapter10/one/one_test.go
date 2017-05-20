@@ -15,6 +15,7 @@ var testcases = []struct {
 }
 
 func TestMerge(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := Merge(c.a, c.b); !reflect.DeepEqual(c.out, out) {
 			t.Errorf("Expected %v but got %v", c.out, out)

@@ -19,6 +19,7 @@ var testcases = []struct {
 }
 
 func TestOneAway(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := OneAway(c.in1, c.in2); out != c.out {
 			t.Errorf("OneAway given %s and %s returns %t but expected %t\n", c.in1, c.in2, out, c.out)

@@ -38,6 +38,7 @@ func getData(list *Elem) []int {
 }
 
 func TestDeleteMiddle(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		head := createList(c.in)
 		current := head

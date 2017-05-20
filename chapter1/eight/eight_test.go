@@ -38,6 +38,7 @@ var testcases = []struct {
 }
 
 func TestZeroMatrix(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := ZeroMatrix(c.in); !MatrixEqual(out, c.out) {
 			t.Errorf("ZeroMatrix: given %v returned %v expected %v\n", c.in, out, c.out)

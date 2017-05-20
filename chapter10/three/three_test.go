@@ -15,6 +15,7 @@ var testcases = []struct {
 }
 
 func TestFindRotatedIndex(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := FindRotatedIndex(c.in, c.search); out != c.out {
 			t.Errorf("Expected %v but got %v", c.out, out)

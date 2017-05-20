@@ -13,6 +13,7 @@ var testcases = []struct {
 }
 
 func TestCreateBinaryTree(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		head := CreateBinaryTree(c.in, 0, len(c.in))
 		preOrder(head)

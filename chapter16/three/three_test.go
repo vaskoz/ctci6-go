@@ -40,6 +40,7 @@ var testcases = []struct {
 }
 
 func TestIntersection(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if point, err := Intersection(c.l1, c.l2); point != c.point || (err == nil) != c.intersect {
 			t.Errorf("expected %v and %t, got %v and %t", c.point, c.intersect, point, err == nil)

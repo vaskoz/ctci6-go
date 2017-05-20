@@ -38,6 +38,7 @@ var testcases = []struct {
 }
 
 func TestMatrixRotation90Inplace(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := MatrixRotation90Inplace(c.in); !MatrixEqual(out, c.out) {
 			t.Errorf("MatrixRotation: given %v returned %v expected %v\n", c.in, out, c.out)

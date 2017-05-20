@@ -24,6 +24,7 @@ func generateUniqueString(length int) string {
 }
 
 func TestIsUnique(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if IsUnique(c.in) != c.out {
 			t.Errorf("IsUnique given %s should output %t\n", c.in, c.out)
@@ -32,6 +33,7 @@ func TestIsUnique(t *testing.T) {
 }
 
 func TestIsUniqueSort(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if IsUniqueSort(c.in) != c.out {
 			t.Errorf("IsUniqueSort given %s should output %t\n", c.in, c.out)
@@ -40,6 +42,7 @@ func TestIsUniqueSort(t *testing.T) {
 }
 
 func TestIsUniqueNoDS(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if IsUniqueNoDS(c.in) != c.out {
 			t.Errorf("IsUniqueNoDS given %s should output %t\n", c.in, c.out)

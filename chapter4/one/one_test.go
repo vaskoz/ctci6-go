@@ -43,6 +43,7 @@ var testcases = []struct {
 }
 
 func TestRouteExists(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := RouteExists(c.data, c.start, c.end); out != c.out {
 			t.Errorf("start %v end %v expected %t got %t", c.start, c.end, c.out, out)

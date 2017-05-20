@@ -3,6 +3,7 @@ package five
 import "testing"
 
 func TestStackSort(t *testing.T) {
+	t.Parallel()
 	s := New()
 	s.Push(101)
 	s.Push(107)
@@ -26,6 +27,7 @@ func TestStackSort(t *testing.T) {
 }
 
 func TestStackPeek(t *testing.T) {
+	t.Parallel()
 	s := New()
 	s.Push(103)
 	if v, empty := s.Peek(), s.IsEmpty(); v != 103 || empty {

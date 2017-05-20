@@ -3,6 +3,7 @@ package six
 import "testing"
 
 func TestDequeueAny(t *testing.T) {
+	t.Parallel()
 	as := New()
 	as.Enqueue(&Dog{})
 	as.Enqueue(&Cat{})
@@ -15,6 +16,7 @@ func TestDequeueAny(t *testing.T) {
 }
 
 func TestDequeueDogCat(t *testing.T) {
+	t.Parallel()
 	as := New()
 	as.Enqueue(&Cat{"fluffy"})
 	as.Enqueue(&Cat{"mittens"})

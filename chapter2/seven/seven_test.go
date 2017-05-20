@@ -56,6 +56,7 @@ func sprint(head *Elem) string {
 }
 
 func TestIntersection(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		first, second := createIntersectingLists(c.in1, c.in2)
 		if out := Intersection(first, second); out == nil && c.out != 0 {

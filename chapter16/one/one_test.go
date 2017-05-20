@@ -10,6 +10,7 @@ func generateTestcases() []struct{ x, y, ex, ey int } {
 }
 
 func TestNumberSwap(t *testing.T) {
+	t.Parallel()
 	testcases := generateTestcases()
 	for _, c := range testcases {
 		if NumberSwap(&c.x, &c.y); c.x != c.ex && c.y != c.ey {
@@ -19,6 +20,7 @@ func TestNumberSwap(t *testing.T) {
 }
 
 func TestNumberSwapGo(t *testing.T) {
+	t.Parallel()
 	testcases := generateTestcases()
 	for _, c := range testcases {
 		if NumberSwapGo(&c.x, &c.y); c.x != c.ex && c.y != c.ey {
@@ -28,6 +30,7 @@ func TestNumberSwapGo(t *testing.T) {
 }
 
 func TestNumberSwapTemp(t *testing.T) {
+	t.Parallel()
 	testcases := generateTestcases()
 	for _, c := range testcases {
 		if NumberSwapTemp(&c.x, &c.y); c.x != c.ex && c.y != c.ey {

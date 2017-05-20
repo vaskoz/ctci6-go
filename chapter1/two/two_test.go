@@ -25,6 +25,7 @@ func generateUniqueString(length int) string {
 }
 
 func TestIsPermutation(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if IsPermutation(c.in[0], c.in[1]) != c.out {
 			t.Errorf("IsPermutation given %s and %s but got %t\n", c.in[0], c.in[1], c.out)
@@ -33,6 +34,7 @@ func TestIsPermutation(t *testing.T) {
 }
 
 func TestIsPermutationDS(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if IsPermutationDS(c.in[0], c.in[1]) != c.out {
 			t.Errorf("IsPermutationDS given %s and %s but got %t\n", c.in[0], c.in[1], c.out)

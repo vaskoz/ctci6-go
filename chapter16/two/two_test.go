@@ -21,6 +21,7 @@ var testcases = []struct {
 }
 
 func TestWordFrequency(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := WordFrequency(c.book); !reflect.DeepEqual(c.freq, out) {
 			t.Errorf("got %v expected %v", out, c.freq)

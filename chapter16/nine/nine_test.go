@@ -16,6 +16,7 @@ var testcases = []struct {
 }
 
 func TestAdd(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if add := Add(c.a, c.b); c.add != add {
 			t.Errorf("Add: expected %v, but got %v", c.add, add)
@@ -24,6 +25,7 @@ func TestAdd(t *testing.T) {
 }
 
 func TestSubtract(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if subtract := Subtract(c.a, c.b); c.subtract != subtract {
 			t.Errorf("Subtract: expected %v, but got %v", c.subtract, subtract)
@@ -32,6 +34,7 @@ func TestSubtract(t *testing.T) {
 }
 
 func TestMultiply(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if multiply := Multiply(c.a, c.b); c.multiply != multiply {
 			t.Errorf("Multiply: expected %v, but got %v", c.multiply, multiply)
@@ -40,6 +43,7 @@ func TestMultiply(t *testing.T) {
 }
 
 func TestDivide(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if divide := Divide(c.a, c.b); c.divide != divide {
 			t.Errorf("Divide: expected %v, but got %v", c.divide, divide)

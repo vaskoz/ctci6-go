@@ -14,6 +14,7 @@ var testcases = []struct {
 }
 
 func TestEnglishInt(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if english := EnglishInt(c.n); english != c.english {
 			t.Errorf("Expected '%v', got '%v'", c.english, english)

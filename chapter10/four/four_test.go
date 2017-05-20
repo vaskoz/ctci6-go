@@ -13,6 +13,7 @@ var testcases = []struct {
 }
 
 func TestSearchListy(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := SearchListy(c.in, c.search); out != c.out {
 			t.Errorf("Expected %v got %v", c.out, out)

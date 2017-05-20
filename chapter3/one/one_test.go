@@ -3,6 +3,7 @@ package one
 import "testing"
 
 func TestBasicThreeStacks(t *testing.T) {
+	t.Parallel()
 	threeStacks := New(3, 2)
 	threeStacks.Push(0, "foo")
 	threeStacks.Push(1, "baz")
@@ -18,6 +19,7 @@ func TestBasicThreeStacks(t *testing.T) {
 }
 
 func TestBasicFoundPop(t *testing.T) {
+	t.Parallel()
 	s := New(3, 1)
 	s.Push(2, "bar")
 	if v, found := s.Pop(2); found == false || v != "bar" {
@@ -26,6 +28,7 @@ func TestBasicFoundPop(t *testing.T) {
 }
 
 func TestBasicNotFoundPop(t *testing.T) {
+	t.Parallel()
 	s := New(3, 1)
 	if v, found := s.Pop(2); found {
 		t.Errorf("Pop returned %v and %v but expected not found\n", v, found)
@@ -33,6 +36,7 @@ func TestBasicNotFoundPop(t *testing.T) {
 }
 
 func TestExceedingCapacity(t *testing.T) {
+	t.Parallel()
 	s := New(3, 2)
 	s.Push(0, "foo")
 	s.Push(1, "baz")
@@ -42,6 +46,7 @@ func TestExceedingCapacity(t *testing.T) {
 }
 
 func TestBadStackCreation(t *testing.T) {
+	t.Parallel()
 	defer func() {
 		if r := recover(); r == nil {
 			t.Errorf("No panic when there should be")
@@ -51,6 +56,7 @@ func TestBadStackCreation(t *testing.T) {
 }
 
 func TestBadCapacityCreation(t *testing.T) {
+	t.Parallel()
 	defer func() {
 		if r := recover(); r == nil {
 			t.Errorf("No panic when there should be")
@@ -60,6 +66,7 @@ func TestBadCapacityCreation(t *testing.T) {
 }
 
 func TestBadIdSize(t *testing.T) {
+	t.Parallel()
 	defer func() {
 		if r := recover(); r == nil {
 			t.Errorf("No panic when there should be")
@@ -70,6 +77,7 @@ func TestBadIdSize(t *testing.T) {
 }
 
 func TestBadIdPush(t *testing.T) {
+	t.Parallel()
 	defer func() {
 		if r := recover(); r == nil {
 			t.Errorf("No panic when there should be")
@@ -80,6 +88,7 @@ func TestBadIdPush(t *testing.T) {
 }
 
 func TestBadIdPop(t *testing.T) {
+	t.Parallel()
 	defer func() {
 		if r := recover(); r == nil {
 			t.Errorf("No panic when there should be")

@@ -14,6 +14,7 @@ var testcases = []struct {
 }
 
 func TestMostLiveYear(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if mostLiveYear := MostLiveYear(c.births, c.deaths); mostLiveYear != c.mostLiveYear {
 			t.Errorf("Expected %v, but got %v", c.mostLiveYear, mostLiveYear)

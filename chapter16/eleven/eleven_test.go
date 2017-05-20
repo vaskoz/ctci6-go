@@ -14,6 +14,7 @@ var testcases = []struct {
 }
 
 func TestDivingBoards(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if got := DivingBoards(c.short, c.long, c.k); !reflect.DeepEqual(got, c.expected) {
 			t.Errorf("Expected %v, but got %v", c.expected, got)

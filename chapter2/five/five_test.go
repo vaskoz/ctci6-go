@@ -17,6 +17,7 @@ var testcases = []struct {
 }
 
 func TestSumReverseList(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		first, second := createList(c.in1), createList(c.in2)
 		if out := SumReverseList(first, second); out != c.out {

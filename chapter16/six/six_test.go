@@ -10,6 +10,7 @@ var testcases = []struct {
 }
 
 func TestSmallestDifference(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if diff := SmallestDifference(c.a, c.b); diff != c.diff {
 			t.Errorf("Expected %v, but got %v", c.diff, diff)

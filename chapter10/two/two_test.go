@@ -16,6 +16,7 @@ var testcases = []struct {
 }
 
 func TestGroupAnagrams(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if GroupAnagrams(c.in); !reflect.DeepEqual(c.in, c.out) {
 			t.Errorf("Expected %v but got %v", c.out, c.in)

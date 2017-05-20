@@ -14,6 +14,7 @@ var testcases = []struct {
 }
 
 func TestCalculate(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if output := Calculate(c.input); output != c.output {
 			t.Errorf("Expected %v, got %v", c.output, output)
@@ -22,6 +23,7 @@ func TestCalculate(t *testing.T) {
 }
 
 func TestBadCalculateInput(t *testing.T) {
+	t.Parallel()
 	defer func() {
 		if r := recover(); r == nil {
 			t.Errorf("Expected a panic on bad input")

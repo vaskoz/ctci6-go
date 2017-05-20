@@ -16,6 +16,7 @@ var testcases = []struct {
 }
 
 func TestRemoveDups(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		l := createList(c.in)
 		RemoveDups(l)

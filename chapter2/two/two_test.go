@@ -26,6 +26,7 @@ func createList(data []int) *Elem {
 }
 
 func TestFindKth(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		head := createList(c.in)
 		if out := FindKth(head, c.k); out.Value != c.out {
@@ -44,6 +45,7 @@ func BenchmarkFindKth(b *testing.B) {
 }
 
 func TestFindKth2Ptr(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		head := createList(c.in)
 		if out := FindKth2Ptr(head, c.k); out.Value != c.out {

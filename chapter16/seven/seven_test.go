@@ -14,6 +14,7 @@ var testcases = []struct {
 }
 
 func TestMaxNoCompare(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if max := MaxNoCompare(c.a, c.b); max != c.max {
 			t.Errorf("Expected %v, but got %v", c.max, max)
@@ -30,6 +31,7 @@ func BenchmarkMaxNoCompare(b *testing.B) {
 }
 
 func TestMaxCompare(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if max := MaxCompare(c.a, c.b); max != c.max {
 			t.Errorf("Expected %v, but got %v", c.max, max)

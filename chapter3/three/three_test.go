@@ -3,6 +3,7 @@ package three
 import "testing"
 
 func TestSetOfStacks(t *testing.T) {
+	t.Parallel()
 	sos := New(2)
 	sos.Push(100)
 	sos.Push(101)
@@ -22,6 +23,7 @@ func TestSetOfStacks(t *testing.T) {
 }
 
 func TestSetOfStacksPopAt(t *testing.T) {
+	t.Parallel()
 	sos := New(1)
 	sos.Push(100)
 	sos.Push(101)
@@ -32,6 +34,7 @@ func TestSetOfStacksPopAt(t *testing.T) {
 }
 
 func TestSetOfStacksEmptyPop(t *testing.T) {
+	t.Parallel()
 	defer func() {
 		if r := recover(); r == nil {
 			t.Errorf("No panic when there should be")

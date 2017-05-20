@@ -15,6 +15,7 @@ var testcases = []struct {
 }
 
 func TestInplaceURLify(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := InplaceURLify(c.in); !reflect.DeepEqual(out, c.out) {
 			t.Errorf("InplaceURLify: given %v expected %v but got %v\n", c.in, c.out, out)
@@ -23,6 +24,7 @@ func TestInplaceURLify(t *testing.T) {
 }
 
 func TestSimpleURLify(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := SimpleURLify(c.in); !reflect.DeepEqual(out, c.out) {
 			t.Errorf("SimpleURLify: given %v expected %v but got %v\n", c.in, c.out, out)

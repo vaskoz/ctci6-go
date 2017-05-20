@@ -3,6 +3,7 @@ package twentyfive
 import "testing"
 
 func TestLRU(t *testing.T) {
+	t.Parallel()
 	lru := New(3)
 	lru.Set(2, "foo")
 	lru.Set(4, "bar")

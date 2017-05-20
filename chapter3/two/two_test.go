@@ -13,6 +13,7 @@ var intLessFunc = func(a, b interface{}) bool {
 }
 
 func TestMinStack(t *testing.T) {
+	t.Parallel()
 	ms := New(10, intLessFunc)
 	ms.Push(10)
 	ms.Push(15)

@@ -12,6 +12,7 @@ var testcases = []struct {
 }
 
 func TestCouldBePalindrome(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := CouldBePalindrome(c.in); out != c.out {
 			t.Errorf("CouldBePalindrome given %s and got %t but expected %t\n", c.in, out, c.out)

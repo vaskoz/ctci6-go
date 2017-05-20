@@ -30,6 +30,7 @@ func createList(data []int) *Elem {
 }
 
 func TestDetectLoop(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := DetectLoop(createList(c.in)); out == nil || out.Value != c.out {
 			if out == nil && c.out == 0 {

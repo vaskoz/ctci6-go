@@ -3,6 +3,7 @@ package four
 import "testing"
 
 func TestQueue(t *testing.T) {
+	t.Parallel()
 	q := New()
 	q.Push(100)
 	q.Push(101)

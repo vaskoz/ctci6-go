@@ -3,6 +3,7 @@ package one
 import "testing"
 
 func TestMistake(t *testing.T) {
+	t.Parallel()
 	if err := Mistake(false); err != nil {
 		t.Errorf("This won't overflow so no error")
 	}

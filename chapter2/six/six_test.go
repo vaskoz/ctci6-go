@@ -23,6 +23,7 @@ func createList(data []int) *list.List {
 }
 
 func TestIsPalindrome(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		l := createList(c.in)
 		if out := IsPalindrome(l); out != c.out {

@@ -13,6 +13,7 @@ var testcases = []struct {
 }
 
 func TestStringRotation(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := StringRotation(c.s1, c.s2); out != c.out {
 			t.Errorf("StringRotation: %s, %s return %t expected %t\n", c.s1, c.s2, out, c.out)

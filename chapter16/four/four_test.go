@@ -93,6 +93,7 @@ var testcases = []struct {
 }
 
 func TestHasWon(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if won := HasWon(c.board); won != c.won {
 			t.Errorf("Expected %t but got %t for board %v", c.won, won, c.board)

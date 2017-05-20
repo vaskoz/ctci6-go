@@ -12,6 +12,7 @@ var testcases = []struct {
 }
 
 func TestStringCompress(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := StringCompress(c.in); out != c.out {
 			t.Errorf("StringCompress given %s returns %s expects %s\n", c.in, out, c.out)
@@ -28,6 +29,7 @@ func BenchmarkStringCompress(b *testing.B) {
 }
 
 func TestStringCompressList(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := StringCompressList(c.in); out != c.out {
 			t.Errorf("StringCompressList given %s returns %s expects %s\n", c.in, out, c.out)

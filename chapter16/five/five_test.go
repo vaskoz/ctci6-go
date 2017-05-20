@@ -12,6 +12,7 @@ var testcases = []struct {
 }
 
 func TestFactorialZeros(t *testing.T) {
+	t.Parallel()
 	for _, c := range testcases {
 		if out := FactorialZeros(c.in); out != c.out {
 			t.Errorf("Expected %v, but got %v", c.out, out)
