@@ -10,14 +10,14 @@ var testcases = []struct {
 	{
 		data: DiGraph{
 			1: map[int]struct{}{
-				3: struct{}{},
-				4: struct{}{},
+				3: {},
+				4: {},
 			},
 			2: map[int]struct{}{
-				3: struct{}{},
+				3: {},
 			},
 			3: map[int]struct{}{
-				4: struct{}{},
+				4: {},
 			},
 		},
 		start: 1,
@@ -27,13 +27,13 @@ var testcases = []struct {
 	{
 		data: DiGraph{
 			1: map[int]struct{}{
-				2: struct{}{},
+				2: {},
 			},
 			2: map[int]struct{}{
-				4: struct{}{},
+				4: {},
 			},
 			3: map[int]struct{}{
-				1: struct{}{},
+				1: {},
 			},
 		},
 		start: 1,

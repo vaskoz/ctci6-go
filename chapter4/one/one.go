@@ -11,7 +11,7 @@ func RouteExists(graph DiGraph, start, end int) bool {
 		v, stack = stack[len(stack)-1], stack[:len(stack)-1]
 		if _, found := discovered[v]; !found {
 			discovered[v] = struct{}{}
-			for k, _ := range graph[v] {
+			for k := range graph[v] {
 				if k == end {
 					return true
 				}
