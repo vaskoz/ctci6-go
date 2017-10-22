@@ -48,6 +48,6 @@ func (sos *setOfStacks) Size() int {
 	return size
 }
 
-func New(capacity int) *setOfStacks {
+func New(capacity int) SetOfStacks {
 	return &setOfStacks{capacity: capacity}
 }

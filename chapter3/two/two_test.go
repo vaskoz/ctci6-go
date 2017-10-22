@@ -7,9 +7,8 @@ var intLessFunc = func(a, b interface{}) bool {
 	bs := b.(int)
 	if as < bs {
 		return true
-	} else {
-		return false
 	}
+	return false
 }
 
 func TestMinStack(t *testing.T) {

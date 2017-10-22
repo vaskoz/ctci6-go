@@ -10,9 +10,8 @@ func DetectLoop(head *Elem) *Elem {
 	for head != nil {
 		if _, found := seen[head]; found {
 			return head
-		} else {
-			seen[head] = struct{}{}
 		}
+		seen[head] = struct{}{}
 		head = head.next
 	}
 	return nil

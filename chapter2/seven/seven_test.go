@@ -46,7 +46,7 @@ func createIntersectingLists(l1, l2 []int) (*Elem, *Elem) {
 }
 
 func sprint(head *Elem) string {
-	var result string = "["
+	var result = "["
 	for head != nil {
 		result += fmt.Sprintf("%d->", head.Value)
 		head = head.next

@@ -6,7 +6,7 @@ import (
 
 func Mistake(overflow bool) error {
 	var i uint
-	var maxUint uint = ^uint(0) // get max uint for this architecture
+	var maxUint = ^uint(0) // get max uint for this architecture
 	var target uint = 1
 	if overflow {
 		target = 0

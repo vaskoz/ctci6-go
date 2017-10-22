@@ -44,7 +44,7 @@ func createList(data []int) *Elem {
 }
 
 func sprint(head *Elem) string {
-	var result string = "["
+	var result = "["
 	for head != nil {
 		result += fmt.Sprintf("%d->", head.Value)
 		head = head.next

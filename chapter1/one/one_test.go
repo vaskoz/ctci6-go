@@ -14,7 +14,7 @@ var testcases = []struct {
 }
 
 func generateUniqueString(length int) string {
-	var c rune = 0
+	var c rune
 	var result []rune
 	for i := 0; i < length; i++ {
 		result = append(result, c)

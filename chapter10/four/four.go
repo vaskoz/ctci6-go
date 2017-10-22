@@ -6,9 +6,8 @@ func (ls *Listy) elementAt(i int) int {
 	d := []int(*ls)
 	if i > len(d) {
 		return -1
-	} else {
-		return d[i-1]
 	}
+	return d[i-1]
 }
 
 func SearchListy(ls *Listy, search int) int {

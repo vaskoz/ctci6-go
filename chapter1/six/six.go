@@ -24,9 +24,8 @@ func StringCompress(orig string) string {
 	result = append(result, []rune(fmt.Sprintf("%s%d", string(last), count))...)
 	if len(result) >= len(orig) {
 		return orig
-	} else {
-		return string(result)
 	}
+	return string(result)
 }
 
 func StringCompressList(orig string) string {
@@ -47,7 +46,6 @@ func StringCompressList(orig string) string {
 	}
 	if len(result) >= len(runes) {
 		return orig
-	} else {
-		return string(result)
 	}
+	return string(result)
 }

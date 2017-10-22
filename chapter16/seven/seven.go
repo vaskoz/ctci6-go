@@ -13,7 +13,6 @@ func MaxNoCompare(a, b int) int {
 func MaxCompare(a, b int) int {
 	if a < b {
 		return b
-	} else {
-		return a
 	}
+	return a
 }

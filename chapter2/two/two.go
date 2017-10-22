@@ -15,15 +15,15 @@ func FindKth(head *Elem, k int) *Elem {
 }
 
 func FindKth2Ptr(head *Elem, k int) *Elem {
-	kPtr := head
+	ptr := head
 	for i := 0; i < k; i++ {
 		head = head.next
 	}
 	for head.next != nil {
 		head = head.next
-		kPtr = kPtr.next
+		ptr = ptr.next
 	}
-	return kPtr
+	return ptr
 }
 
 func ListSize(head *Elem) int {

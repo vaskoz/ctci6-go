@@ -41,7 +41,7 @@ type node struct {
 	value    interface{}
 }
 
-func New(capacity int, lessFunc func(a, b interface{}) bool) *minStack {
+func New(capacity int, lessFunc func(a, b interface{}) bool) MinStack {
 	data := make([]node, 0, capacity)
 	return &minStack{data: data, lessFunc: lessFunc}
 }

@@ -23,12 +23,11 @@ func New(capacity int) *LRU {
 }
 
 func (l *LRU) Get(key interface{}) interface{} {
-	if e, found := l.data[key]; !found {
-		return nil
-	} else {
+	if e, found := l.data[key]; found {
 		l.list.MoveToFront(e)
 		return e.Value.(*tuple).value
 	}
+	return nil
 }
 
 func (l *LRU) Set(key, value interface{}) {

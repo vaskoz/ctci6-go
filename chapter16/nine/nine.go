@@ -9,7 +9,7 @@ func Subtract(a, b int) int {
 }
 
 func Multiply(a, b int) int {
-	var neg bool = false
+	var neg = false
 	if a < 0 {
 		a = -a
 		neg = true
@@ -34,13 +34,12 @@ func Multiply(a, b int) int {
 	}
 	if neg {
 		return -result
-	} else {
-		return result
 	}
+	return result
 }
 
 func Divide(a, b int) int {
-	var neg bool = false
+	var neg = false
 	if a < 0 {
 		a = -a
 		neg = true
@@ -57,14 +56,11 @@ func Divide(a, b int) int {
 	if Multiply(result, b) > a {
 		if neg {
 			return -result + 1
-		} else {
-			return result - 1
 		}
-	} else {
-		if neg {
-			return -result
-		} else {
-			return result
-		}
+		return result - 1
 	}
+	if neg {
+		return -result
+	}
+	return result
 }
