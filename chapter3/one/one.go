@@ -5,6 +5,7 @@ import (
 	"log"
 )
 
+// Stacks is a collection of stacks accessible by an ID.
 type Stacks interface {
 	Push(id int, v interface{}) error
 	Pop(id int) (interface{}, bool)
@@ -49,6 +50,7 @@ func (ks *stacks) Size(id int) int {
 	return len(ks.positions[id])
 }
 
+// New returns Stacks with a specified number of stacks each with a given capacity.
 func New(numStacks, totalCapacity int) Stacks {
 	if numStacks < 1 || totalCapacity < 1 {
 		log.Panicln("number of stacks and total capacity must be greater than or equal to one.")
