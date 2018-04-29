@@ -2,8 +2,8 @@ package six
 
 import "container/list"
 
-type Cat struct{ name string }
-type Dog struct{ name string }
+type Cat struct{ Name string }
+type Dog struct{ Name string }
 
 type AnimalShelter interface {
 	Enqueue(a interface{})
