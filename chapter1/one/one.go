@@ -4,8 +4,7 @@ import "sort"
 
 func IsUnique(str string) bool {
 	m := map[rune]int{}
-	runes := []rune(str)
-	for _, r := range runes {
+	for _, r := range str {
 		if count := m[r]; count == 1 {
 			return false
 		}

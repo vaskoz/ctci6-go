@@ -3,9 +3,8 @@ package four
 import "strings"
 
 func CouldBePalindrome(str string) bool {
-	runes := []rune(strings.ToLower(str))
 	m := map[rune]int{}
-	for _, r := range runes {
+	for _, r := range strings.ToLower(str) {
 		m[r]++
 	}
 	delete(m, ' ')
