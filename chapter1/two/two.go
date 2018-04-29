@@ -5,6 +5,9 @@ import (
 	"sort"
 )
 
+// IsPermutation returns true if strings are permutations of each other.
+// It sorts each rune in the string and then compares them for equality.
+// Since each string is sorted runtime is O(N log N) where N=len(s1)+len(s2)
 func IsPermutation(s1, s2 string) bool {
 	if len(s1) != len(s2) {
 		return false
@@ -15,6 +18,10 @@ func IsPermutation(s1, s2 string) bool {
 	return reflect.DeepEqual(r1, r2)
 }
 
+// IsPermutationDS returns true if strings are permutations of each other.
+// It uses a map of space O(N) to count occurrences of runes in one string.
+// It then removes each rune occurrence that appears in the second string.
+// Runtime is O(N) thanks to the map.
 func IsPermutationDS(s1, s2 string) bool {
 	r1, r2 := []rune(s1), []rune(s2)
 	if len(r1) != len(r2) {
