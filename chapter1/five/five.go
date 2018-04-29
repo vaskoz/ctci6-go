@@ -1,5 +1,6 @@
 package five
 
+// OneAway checks if two strings are at most one edit away from each other.
 func OneAway(s1, s2 string) bool {
 	if s1 == s2 {
 		return true

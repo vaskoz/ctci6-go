@@ -2,10 +2,11 @@ package four
 
 import "strings"
 
+// CouldBePalindrome checks if a string can be rewritten as a palindrome.
+// The function ignores spaces in deciding palindrome viability.
 func CouldBePalindrome(str string) bool {
-	runes := []rune(strings.ToLower(str))
 	m := map[rune]int{}
-	for _, r := range runes {
+	for _, r := range strings.ToLower(str) {
 		m[r]++
 	}
 	delete(m, ' ')

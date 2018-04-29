@@ -2,6 +2,7 @@ package three
 
 import "strings"
 
+// InplaceURLify takes a string with extra trailing space to fit the encoded string.
 func InplaceURLify(str string) string {
 	input := []rune(str)
 	endIndex := len(input) - 1
@@ -19,6 +20,7 @@ func InplaceURLify(str string) string {
 	return string(input)
 }
 
+// SimpleURLify replaces all spaces with %20
 func SimpleURLify(str string) string {
 	str = strings.TrimSpace(str)
 	return strings.Replace(str, " ", "%20", -1)

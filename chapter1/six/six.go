@@ -1,12 +1,16 @@
 package six
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
+// StringCompress compresses a string using the pattern rune followed by int of occurrences.
 func StringCompress(orig string) string {
 	if len(orig) < 3 {
 		return orig
 	}
-	result := make([]rune, 0, len(orig))
+	var result strings.Builder
 	count := 0
 	var last rune
 	for i, r := range orig {
@@ -14,20 +18,22 @@ func StringCompress(orig string) string {
 			last = r
 			count = 1
 		} else if r != last {
-			result = append(result, []rune(fmt.Sprintf("%s%d", string(last), count))...)
+			fmt.Fprintf(&result, "%s%d", string(last), count)
 			count = 1
 			last = r
 		} else {
 			count++
 		}
 	}
-	result = append(result, []rune(fmt.Sprintf("%s%d", string(last), count))...)
-	if len(result) >= len(orig) {
+	fmt.Fprintf(&result, "%s%d", string(last), count)
+	if result.Len() >= len(orig) {
 		return orig
 	}
-	return string(result)
+	return result.String()
 }
 
+// StringCompressList compresses a string using the pattern rune followed by int of occurrences.
+// It uses an additional list of ints to represent the indicies where runes change.
 func StringCompressList(orig string) string {
 	if len(orig) < 3 {
 		return orig
