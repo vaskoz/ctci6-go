@@ -2,6 +2,7 @@ package six
 
 import "container/list"
 
+// IsPalindrome checks if a linked list is a palindrome.
 func IsPalindrome(head *list.List) bool {
 	front := head.Front()
 	back := head.Back()

@@ -2,6 +2,7 @@ package one
 
 import "container/list"
 
+// RemoveDups removes duplicates from a linked list.
 func RemoveDups(l *list.List) {
 	m := map[int]int{}
 	for e := l.Front(); e != nil; e = e.Next() {

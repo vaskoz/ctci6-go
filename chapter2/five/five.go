@@ -1,10 +1,14 @@
 package five
 
+// Elem represents a node in a singly linked list.
 type Elem struct {
 	Value int
 	next  *Elem
 }
 
+// SumReverseList takes two singly linked lists of ints.
+// It sums their values assuming the first value of each list is the 1's value.
+// And the 2nd value in each list is the 10's value and so on.
 func SumReverseList(first, second *Elem) int {
 	result := 0
 	carrytheone := false
