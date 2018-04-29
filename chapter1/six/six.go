@@ -2,6 +2,7 @@ package six
 
 import "fmt"
 
+// StringCompress compresses a string using the pattern rune followed by int of occurrences.
 func StringCompress(orig string) string {
 	if len(orig) < 3 {
 		return orig
@@ -28,6 +29,8 @@ func StringCompress(orig string) string {
 	return string(result)
 }
 
+// StringCompressList compresses a string using the pattern rune followed by int of occurrences.
+// It uses an additional list of ints to represent the indicies where runes change.
 func StringCompressList(orig string) string {
 	if len(orig) < 3 {
 		return orig
