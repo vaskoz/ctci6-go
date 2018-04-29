@@ -23,15 +23,14 @@ func IsPermutation(s1, s2 string) bool {
 // It then removes each rune occurrence that appears in the second string.
 // Runtime is O(N) thanks to the map.
 func IsPermutationDS(s1, s2 string) bool {
-	r1, r2 := []rune(s1), []rune(s2)
-	if len(r1) != len(r2) {
+	if len(s1) != len(s2) {
 		return false
 	}
 	m := map[rune]int{}
-	for _, r := range r1 {
+	for _, r := range s1 {
 		m[r]++
 	}
-	for _, r := range r2 {
+	for _, r := range s2 {
 		if count := m[r]; count > 1 {
 			m[r]--
 		} else if count == 1 {
