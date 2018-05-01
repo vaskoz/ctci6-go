@@ -4,6 +4,7 @@ import (
 	"sort"
 )
 
+// GroupAnagrams sorts a slice of strings by grouping anagrams together.
 func GroupAnagrams(words []string) {
 	sort.SliceStable(words, func(i, j int) bool {
 		a := []rune(words[i])

@@ -1,5 +1,7 @@
 package three
 
+// FindRotatedIndex returns the index of a search value in a sorted but rotated slice of ints.
+// The implementation uses a modified binary search that functions in a rotated slice of sorted ints.
 func FindRotatedIndex(data []int, search int) int {
 	l, r := 0, len(data)-1
 	for l <= r {
