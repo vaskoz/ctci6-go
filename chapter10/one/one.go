@@ -1,5 +1,6 @@
 package one
 
+// Merge takes two sorted int slices and merges them into a new int slice.
 func Merge(a, b []int) []int {
 	result := make([]int, 0, len(a)+len(b))
 	i, j := 0, 0
