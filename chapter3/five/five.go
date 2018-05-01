@@ -1,5 +1,6 @@
 package five
 
+// Stack represents a Last-In-First-Out stack.
 type Stack interface {
 	Push(v interface{})
 	Pop() interface{}
@@ -29,10 +30,12 @@ func (s *stack) IsEmpty() bool {
 	return len(s.data) == 0
 }
 
+// New returns a new Stack implementation.
 func New() Stack {
 	return &stack{}
 }
 
+// Sort sorts the values in a given stack using the provided comparison function.
 func Sort(s Stack, lessFunc func(first, second interface{}) bool) {
 	var p interface{}
 	t := New()

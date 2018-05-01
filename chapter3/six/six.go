@@ -2,9 +2,14 @@ package six
 
 import "container/list"
 
-type Cat struct{ name string }
-type Dog struct{ name string }
+// Cat has a Name.
+type Cat struct{ Name string }
 
+// Dog also has a Name.
+type Dog struct{ Name string }
+
+// AnimalShelter can enqueue and dequeue arbitrary pets.
+// It can also dequeue a Dog or a Cat specifically.
 type AnimalShelter interface {
 	Enqueue(a interface{})
 	DequeueAny() interface{}
@@ -48,6 +53,7 @@ func (as *animalShelter) DequeueCat() *Cat {
 	return nil
 }
 
+// New returns a new AnimalShelter implementation.
 func New() AnimalShelter {
 	return &animalShelter{list.New()}
 }

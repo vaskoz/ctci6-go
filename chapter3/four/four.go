@@ -1,5 +1,6 @@
 package four
 
+// Queue represents a First-In-First-Out queue.
 type Queue interface {
 	Push(v interface{})
 	Pop() interface{}
@@ -11,6 +12,7 @@ type queue struct {
 	pops   Stack
 }
 
+// Stack is a type of queue.
 type Stack interface {
 	Queue
 }
@@ -51,6 +53,7 @@ func (s *stack) Size() int {
 	return len(s.data)
 }
 
+// New returns a Queue implemented using 2 Stacks.
 func New() Queue {
 	return &queue{&stack{}, &stack{}}
 }

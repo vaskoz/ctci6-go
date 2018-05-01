@@ -5,10 +5,7 @@ import "testing"
 var intLessFunc = func(a, b interface{}) bool {
 	as := a.(int)
 	bs := b.(int)
-	if as < bs {
-		return true
-	}
-	return false
+	return as < bs
 }
 
 func TestMinStack(t *testing.T) {

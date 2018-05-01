@@ -2,6 +2,7 @@ package three
 
 import "log"
 
+// SetOfStacks represents a collection of stacks that combine into a larger stack.
 type SetOfStacks interface {
 	Push(v interface{})
 	Pop() interface{}
@@ -48,6 +49,7 @@ func (sos *setOfStacks) Size() int {
 	return size
 }
 
+// New returns a SetOfStacks where each stack is of a maximum specified capacity.
 func New(capacity int) SetOfStacks {
 	return &setOfStacks{capacity: capacity}
 }

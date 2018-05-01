@@ -1,5 +1,6 @@
 package two
 
+// MinStack is a stack that keeps track of the minimum value in the stack at all times.
 type MinStack interface {
 	Push(v interface{})
 	Pop() interface{}
@@ -41,6 +42,7 @@ type node struct {
 	value    interface{}
 }
 
+// New returns a stack of capacity using a provided lessFunc to compare values.
 func New(capacity int, lessFunc func(a, b interface{}) bool) MinStack {
 	data := make([]node, 0, capacity)
 	return &minStack{data: data, lessFunc: lessFunc}

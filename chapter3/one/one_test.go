@@ -22,7 +22,7 @@ func TestBasicFoundPop(t *testing.T) {
 	t.Parallel()
 	s := New(3, 1)
 	s.Push(2, "bar")
-	if v, found := s.Pop(2); found == false || v != "bar" {
+	if v, found := s.Pop(2); !found || v != "bar" {
 		t.Errorf("Pop returned %v and %v but expected bar and nil\n", v, found)
 	}
 }
