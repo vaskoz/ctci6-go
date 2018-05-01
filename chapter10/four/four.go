@@ -1,5 +1,6 @@
 package four
 
+// Listy is a slice of ints
 type Listy []int
 
 func (ls *Listy) elementAt(i int) int {
@@ -10,6 +11,9 @@ func (ls *Listy) elementAt(i int) int {
 	return d[i-1]
 }
 
+// SearchListy does a binary search to find the index of a search value.
+// The returned index is NOT zero-based.
+// -1 is returned if the search value does not exist in the list.
 func SearchListy(ls *Listy, search int) int {
 	index := 0
 	for index = 1; ls.elementAt(index) != -1; index *= 2 {
