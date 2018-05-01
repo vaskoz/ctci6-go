@@ -1,7 +1,9 @@
 package one
 
+// DiGraph represents a directed graph where each vertex is labeled by an integer.
 type DiGraph map[int]map[int]struct{}
 
+// RouteExists answers the question "Does a route exist between two given vertices?".
 func RouteExists(graph DiGraph, start, end int) bool {
 	var stack []int
 	discovered := make(map[int]struct{})
