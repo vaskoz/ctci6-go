@@ -1,5 +1,7 @@
 package five
 
+// SparseStringSearch does a binary search for a search value.
+// The data is expected to be sorted lexically (natural ordering).
 func SparseStringSearch(data []string, search string) int {
 	l, r := 0, len(data)-1
 	ll, lr := l, r
