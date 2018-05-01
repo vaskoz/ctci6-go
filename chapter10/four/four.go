@@ -15,7 +15,7 @@ func (ls *Listy) elementAt(i int) int {
 // The returned index is NOT zero-based.
 // -1 is returned if the search value does not exist in the list.
 func SearchListy(ls *Listy, search int) int {
-	index := 0
+	var index int
 	for index = 1; ls.elementAt(index) != -1; index *= 2 {
 	}
 	l, r := 1, index
