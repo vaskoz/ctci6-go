@@ -12,9 +12,9 @@ func SparseStringSearch(data []string, search string) int {
 		} else if val == "" {
 			for ; data[mid] == ""; mid++ {
 			}
-			if val := data[mid]; val == search {
+			if nextval := data[mid]; nextval == search {
 				return mid
-			} else if search < val {
+			} else if search < nextval {
 				r = mid - 1
 			} else {
 				l = mid + 1
