@@ -5,6 +5,8 @@ import (
 	"unicode"
 )
 
+// WordFrequency returns a map representing key-values of words and counts in the input.
+// The words are all lowercased and punctuation is removed.
 func WordFrequency(book string) map[string]int {
 	f := func(c rune) bool {
 		return !unicode.IsLetter(c) && !unicode.IsNumber(c)
