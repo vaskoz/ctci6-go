@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// Calculate take a string representing a computation and returns the result.
 func Calculate(input string) float64 {
 	operands := []float64{}
 	operators := []string{}
@@ -56,6 +57,7 @@ func Calculate(input string) float64 {
 	return result
 }
 
+// ParseFloat converts a string into a float64.
 func ParseFloat(val string) float64 {
 	var num float64
 	var err error
