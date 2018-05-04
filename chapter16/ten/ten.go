@@ -1,5 +1,7 @@
 package ten
 
+// MostLiveYear returns the year with the most number of people alive.
+// Input is a slice of births and a slice of deaths.
 func MostLiveYear(births, deaths []int) int {
 	years := make([]int, 1001)
 	for i := 0; i < len(births); i++ {
