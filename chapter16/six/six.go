@@ -5,6 +5,7 @@ import (
 	"sort"
 )
 
+// SmallestDifference finds the smallest possible difference between values of two slices.
 func SmallestDifference(a, b []int) int {
 	sort.Ints(a)
 	sort.Ints(b)

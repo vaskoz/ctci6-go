@@ -13,6 +13,8 @@ var teens = []string{"", "one", "two", "three", "four",
 var tens = []string{"", "ten", "twenty", "thirty", "forty",
 	"fifty", "sixty", "seventy", "eighty", "ninety"}
 
+// EnglishInt take an integer and returns a string representing it in English.
+// Works up to billions.
 func EnglishInt(n int) string {
 	if n == 0 {
 		return "zero"

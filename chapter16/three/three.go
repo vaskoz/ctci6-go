@@ -2,14 +2,18 @@ package three
 
 import "errors"
 
+// Point represents a 2D point with an X and Y coordinate.
 type Point struct {
 	x, y float64
 }
 
+// Line represents a 2D line with a start and end point.
 type Line struct {
 	start, end Point
 }
 
+// Intersection takes two lines and returns the Point at which they intersect.
+// If the two lines do NOT intersect then an error is returned.
 func Intersection(l1, l2 Line) (Point, error) {
 	x1 := l1.start.x
 	x2 := l1.end.x
