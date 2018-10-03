@@ -4,4 +4,4 @@
 [![GoDoc](https://godoc.org/github.com/vaskoz/ctci6-go?status.svg)](https://godoc.org/github.com/vaskoz/ctci6-go) 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
 
-# No Pull Requests accepted. This is just a personal playground.
+# No Pull Requests accepted. This is just a personal playground. 
